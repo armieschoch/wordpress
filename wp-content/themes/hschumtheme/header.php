@@ -12,13 +12,10 @@
     </title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/blog/">
-
     <!-- Bootstrap core CSS -->
     <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
-
     <?php wp_head();?>
   </head>
 
@@ -33,6 +30,7 @@
         <a class="blog-header-logo text-dark" href="<?php bloginfo('url');?>">
           <?php bloginfo('name');?>
           </a>
+          <p class="lead my-3"><?php bloginfo('description');?></p>
 
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
@@ -47,7 +45,6 @@
 
   <div class="nav-header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
     <!-- Your website Links -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <?php

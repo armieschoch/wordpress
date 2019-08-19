@@ -250,6 +250,17 @@ padding: 10px 15px;
   margin-bottom: 15px;
 }
 .comment-reply-title{
-  font-size: 10px;
+  font-size: 12px;
   background: #428bca;
+}
+
+.post-gallery{
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.post-gallery h2{
+  color: #fff;
 }

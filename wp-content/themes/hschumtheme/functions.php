@@ -11,6 +11,11 @@
     //Nav Menus
     register_nav_menus(array('primary' => __('Primary Menu')
   ));
+
+// Posts Formats
+
+  add_theme_support('post-formats', array('aside', 'gallery'));
+
   register_nav_menus(array('footer' => __('Footer Menu')
 ));
   }

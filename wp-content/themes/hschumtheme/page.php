@@ -43,19 +43,23 @@
 </div>
 
 <main role="main" class="container">
-  <div class="row">
-    <div class="col-md-8 blog-main">
-      <h3 class="pb-4 mb-4 font-italic border-bottom">
-      The Featured Post
-      </h3>
-
       <div class="col-sm-8 blog-main">
       <?php if(have_posts()) : ?>
         <?php while(have_posts()) : the_post(); ?>
-            <?php get_template_part('content', get_post_format()); ?>
+      <div class="blog-post">
+        <h2 class="blog-post-title">
+            <?php the_title(); ?>
+        </h2>
+        <?php the_content(); ?>
+      </div><!-- /.blog-post -->
+</div>
+      <nav class="blog-pagination">
+        <a class="btn btn-outline-primary" href="#">Older</a>
+        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+      </nav>
+    </div><!-- /.blog-main -->
   <?php endwhile; ?>
   <?php else : ?>
-    <p><?php __('NO Posts Found'); ?></p>
+    <p><?php __('NO Page Found'); ?></p>
   <?php endif; ?>
-
 <?php get_footer();?>
