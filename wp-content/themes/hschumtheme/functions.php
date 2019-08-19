@@ -46,4 +46,19 @@ add_action( 'init', 'theme_js' );
 
     add_filter('excerpt_length', 'set_excerpt_length');
 
+    //Widgets Locations
+
+   function wpb_init_widgets($id){
+     register_sidebar(array(
+       'name'  => 'Sidebar',
+       'id'  => 'sidebar',
+       'before_widget'  => '<aside class ="blog-sidebar">',
+       'after_widget'   => '</aside>',
+       'before_title' => '<h4>',
+       'after_title'  => '</h4>'
+     ));
+   }
+
+   add_action('widgets_init','wpb_init_widgets');
+
  ?>
