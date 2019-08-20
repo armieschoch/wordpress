@@ -30,8 +30,8 @@
     wp_enqueue_style( 'style.css', get_stylesheet_uri() );
     /*End*/
 }
-add_action( 'wp_enqueue_scripts', 'theme_scripts' );
-function theme_js () {
+  add_action( 'wp_enqueue_scripts', 'theme_scripts' );
+  function theme_js () {
     /*jQuery Reference*/
     wp_deregister_script('jquery');
     wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', false, '3.1.1');
@@ -62,8 +62,39 @@ add_action( 'init', 'theme_js' );
        'before_title' => '<h4>',
        'after_title'  => '</h4>'
      ));
+
+       register_sidebar(array(
+         'name'  => 'Box1',
+         'id'  => 'box1',
+         'before_widget'  => '<aside class ="box">',
+         'after_widget'   => '</aside>',
+         'before_title' => '<h3>',
+         'after_title'  => '</h3>'
+       ));
+
+         register_sidebar(array(
+           'name'  => 'Box2',
+           'id'  => 'box2',
+           'before_widget'  => '<aside class ="box">',
+           'after_widget'   => '</aside>',
+           'before_title' => '<h3>',
+           'after_title'  => '</h3>'
+         ));
+
+           register_sidebar(array(
+             'name'  => 'Box3',
+             'id'  => 'box3',
+             'before_widget'  => '<aside class ="box">',
+             'after_widget'   => '</aside>',
+             'before_title' => '<h3>',
+             'after_title'  => '</h3>'
+           ));
    }
 
    add_action('widgets_init','wpb_init_widgets');
+
+   //Customizer File
+
+   require get_template_directory(). '/inc/customizer.php';
 
  ?>

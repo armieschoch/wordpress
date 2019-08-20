@@ -14,6 +14,9 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/blog/">
     <!-- Bootstrap core CSS -->
     <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" rel="stylesheet">
+    <!--Font Awesome-->
+    <<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Custom styles for this template -->
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
     <?php wp_head();?>
